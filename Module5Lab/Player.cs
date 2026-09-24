@@ -15,18 +15,16 @@ namespace Module5Lab
 
     
 
-
+    // Three constructor methods. One with no parameters, one with only one parameter, and one with two parameters. 
     public Player()
     {
             
     }// end of constructor.
   
-
-
     public Player(string name)
         {
             this.name = name;
-        }
+        }// end constructor
 
     public Player(string name, int startingLives)
         {
@@ -35,32 +33,34 @@ namespace Module5Lab
             livesLeft = startingLives;
         }// end constructor
 
+    // A method that returns the users score. 
     public int GetScore()
         {
             return score;
         }
-
+    // A method that adds points to the players score. Passes a int to the method. 
     public void AddPoints(int totalPoints)
         {
             score += totalPoints;
             
         }// end method. 
 
+    // This method removes a life from the player. 
     public void Kill()
         {
             // Ensure lives don't go below 0.
             if (livesLeft > 0)
             {
-                // Remove one of their lives when they get killed. 
                 livesLeft--;
             }
-        } // end of kill method. 
+        } // end of  method. 
 
+        // Returns the number of lives the player has left. 
         public int GetLivesLeft()
         {
             return livesLeft;
             // Returns the number of lives the player has left. 
-        }
+        } // end of methd. 
 
 
 }
